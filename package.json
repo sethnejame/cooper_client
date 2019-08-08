@@ -8,11 +8,11 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cy:open": "npm start --silent & cypress open",
+    "cy:open": "npm start -p --silent & cypress open",
     "features": "jest -c jest.config.js"
   },
   "eslintConfig": {
