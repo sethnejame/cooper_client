@@ -1,9 +1,9 @@
 import axios from "axios";
 import { storeAuthCredentials } from "./Auth";
 
-const apiUrl = 'http://localhost:3000/api/v1';
+const apiUrl = "http://localhost:3000/api/v1";
 
-const saveData = async (result) => {
+const saveData = async result => {
   let headers = await sessionStorage.getItem("credentials");
   headers = JSON.parse(headers);
   headers = {
@@ -11,17 +11,22 @@ const saveData = async (result) => {
     "Content-type": "application/json",
     Accept: "application/json"
   };
-  const path = apiUrl + '/performance_data';
+  const path = apiUrl + "/performance_data";
   return new Promise((resolve, reject) => {
-    axios.post(path, {
-      performance_data: { data: { message: result }}
-    }, {
-      headers: headers
-    })
-    .then(response => {
-      storeAuthCredentials(response);
-      resolve(response.data.message);
-    });  
+    axios
+      .post(
+        path,
+        {
+          performance_data: { data: { message: result } }
+        },
+        {
+          headers: headers
+        }
+      )
+      .then(response => {
+        storeAuthCredentials(response);
+        resolve(response.data.message);
+      });
   });
 };
 
@@ -46,5 +51,4 @@ const getData = async () => {
   });
 };
 
-export { saveData }
-
+export { saveData, getData };
