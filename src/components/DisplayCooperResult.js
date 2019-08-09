@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import CooperCalculator from "../modules/CooperCalculator";
 
 class DisplayCooperResult extends Component {
   calculate() {
