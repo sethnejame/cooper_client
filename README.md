@@ -1,3 +1,15 @@
+# The Cooper Test
+
+The Cooper Test is a weekly lab assignment from Craft Academy for Week 7.  The goal of this assignment is to create a fitness app that calculates an individual's level of fitness based on the Cooper Calculator and store those results in a retreivable database.
+
+## Deployment
+
+The Cooper Test App is deployed at the following link: 
+
+## Tech Specs
+
+The Cooper Test app runs on both JS React and Ruby on Rails.  JS React handles most of the view/components while Rails manages user data on the backend.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
