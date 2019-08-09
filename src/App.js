@@ -15,7 +15,7 @@ class App extends Component {
       authenticated: false,
       email: "",
       password: "",
-      message: ""
+      message: "Invalid login credentials. Please try again."
     };
   }
 
@@ -57,6 +57,7 @@ class App extends Component {
         >
           Login
         </button>
+        <p>{this.state.message}</p>
       );
     }
 

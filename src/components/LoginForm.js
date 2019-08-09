@@ -1,6 +1,6 @@
 import React from "react";
 
-const LoginForm = (props) => {
+const LoginForm = props => {
   return (
     <form id="login-form">
       <div>
@@ -13,7 +13,7 @@ const LoginForm = (props) => {
         <input id="password" onChange={props.inputChangeHandler} />
       </div>
 
-      <button onClick={(e) => props.loginHandler(e)} id="submit" />
+      <button onClick={e => props.loginHandler(e)} id="submit" />
     </form>
   );
 };
