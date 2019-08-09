@@ -7,7 +7,7 @@ describe('User can log in', () => {
       cy.get('#password').type('password')
       cy.get('button').click()
     })
-    cy.contains('Hi user@mail.com')
+    cy.contains('Hello, user@mail.com!')
   })
 
   it('user cant log in with invalid credentials', () => {
