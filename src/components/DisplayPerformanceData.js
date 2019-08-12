@@ -1,25 +1,25 @@
-import React, { Component } from 'react';
-import { getData } from '../modules/PerformanceData';
+import React, { Component } from "react";
+import { getData } from "../Modules/PerformanceData";
 
 class DisplayPerformanceData extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       performanceData: null
-    }
+    };
   }
   componentDidMount() {
-    this.getPerformanceData()
+    this.getPerformanceData();
   }
 
   async getPerformanceData() {
     let result = await getData();
-    this.setState({performanceData: result.data.entries}, () => {
+    this.setState({ performanceData: result.data.entries }, () => {
       this.props.indexUpdated();
-    })
+    });
   }
 
-  render () {
+  render() {
     let dataIndex;
 
     if (this.props.updateIndex === true) {
@@ -29,17 +29,13 @@ class DisplayPerformanceData extends Component {
       dataIndex = (
         <div>
           {this.state.performanceData.map(item => {
-            return <div key={item.id}>{item.data.message}</div>
+            return <div key={item.id}>{item.data.message}</div>;
           })}
         </div>
-      )
+      );
     }
 
-    return (
-      <div>
-        {dataIndex}
-      </div>
-    )
-  }      
+    return <div>{dataIndex}</div>;
+  }
 }
-  export default DisplayPerformanceData
+export default DisplayPerformanceData;

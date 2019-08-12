@@ -1,9 +1,9 @@
 export const CooperCalculator = (distance, gender, age) => {
   const ratings = [
     "Excellent",
-    "Above average",
+    "Above Average",
     "Average",
-    "Below average",
+    "Below Average",
     "Poor"
   ];
 

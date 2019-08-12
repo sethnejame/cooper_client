@@ -51,4 +51,4 @@ const getData = async () => {
   });
 };
 
-export { saveData, getData };
+export { getData, saveData };
